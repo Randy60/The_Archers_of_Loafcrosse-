@@ -32,7 +32,7 @@ var makeCircle = function(){
   var speed = function(){return [xdir, ydir];}
   var rad = function(){return radius;}
   var byspeed = function(){
-      radius = (Math.abs(xdir) * 10 + Math.abs(ydir) * 10);
+      radius = ( (2 - Math.abs(xdir)) * 10 + (2 - Math.abs(ydir)) * 10);
       c.setAttribute("r", radius);
   }
   c.setAttribute("r", radius);
