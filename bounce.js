@@ -13,22 +13,20 @@ but_1.addEventListener("click", function(){
 var makeCircle = function(){
   var board = document.getElementById('board');
   var c = document.createElementNS("http://www.w3.org/2000/svg","circle");
-  //c.setAttribute("cx", Math.floor((Math.random()*440)) + 30); //30-470
-  //c.setAttribute("cy", Math.floor((Math.random()*440)) + 30);
   var index = circle_hold.length;
-  var xpos = 250;
-  var ypos = 250;
+  var xpos = Math.floor((Math.random()*440)) + 30;
+  var ypos = Math.floor((Math.random()*440)) + 30;
   var xdir = Math.random()*4-2;
     var ydir = Math.random()*4-2;
   var get_pos = function(){return [xpos, ypos];}
-  //var create = function(){
+
   c.setAttribute("r", 30);
   c.setAttribute("fill", "red");
   c.setAttribute("stroke", "black");
   c.setAttribute("cx", xpos);
   c.setAttribute("cy", ypos);
   board.appendChild(c);
-  //}
+
 
   var update = function(){
     if(xpos <= 30 || xpos >= 470){xdir = -1 * xdir;}
@@ -49,7 +47,6 @@ var makeCircle = function(){
   
   return {
     update: update,
-    //create: create,
     get_pos: get_pos,
   };
 }
