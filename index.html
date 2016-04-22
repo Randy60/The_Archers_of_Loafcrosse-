@@ -1,26 +1,10 @@
 <!DOCTYPE html>
 <html>
-  <head><title>SVG Demo</title></head>
   <body>
-    <h2>Bounce SVG</h2>
-    <p>
-    Randolph Higgins
-    SoftDev2 pd 3
-    HW03 Animate Pd3
-    2016-03-24
-    </p>
-    <svg id="savage" height="500" width="500" style="border: 10px solid;">
-      <!--
-        <circle cx="250" cy="250" r="75" fill="yellow" stroke="black"/>
-        <rect x="100" y="100" width="300" height="75" fill="blue"/>
-      -->
-    </svg>
-    <br>
-    <button type="button" id = "circle"> Circle </button>
-    <button type="button" id = "DVD"> Bounce </button>
-    <button type="button" id = "stop"> Stop </button>
-    <button type="button" id = "up"> Speed Up </button>
-    <button type="button" id = "down"> Slow Down </button>
-    <button type="button" id = "grav"> Gravity </button>
-  <script src="svg-interactive.js"></script>
+    <center>
+      <svg id = "board" height="500" width="500" style="border: 1px solid;"></svg>
+      <button id="new_circle" type="button">Add Circle</button><br>
+    </center>
+  </body>
+  <script src="bounce.js"></script>
 </html>
